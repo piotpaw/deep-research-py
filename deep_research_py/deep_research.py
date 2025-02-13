@@ -147,7 +147,7 @@ async def process_serp_result(
     response = await asyncio.get_event_loop().run_in_executor(
         None,
         lambda: openai_client.chat.completions.create(
-            model="o3-mini",
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": system_prompt()},
                 {"role": "user", "content": prompt},
