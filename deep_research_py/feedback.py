@@ -12,7 +12,7 @@ async def generate_feedback(query: str) -> List[str]:
     response = await asyncio.get_event_loop().run_in_executor(
         None,
         lambda: openai_client.chat.completions.create(
-            model="o3-mini",
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": system_prompt()},
                 {
